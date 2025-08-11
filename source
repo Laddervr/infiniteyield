@@ -12460,8 +12460,8 @@ addcmd("jerk", {}, function(args, speaker)
         end
 
         track:Play()
-        track:AdjustSpeed(isR15 and 0.7 or 0.65)
-        track.TimePosition = 0.6
+        track:AdjustSpeed(isR15 and 0 or 0)
+        track.TimePosition = 0
         task.wait(0)
         while track and track.TimePosition < (not isR15 and 0.65 or 0.7) do task.wait(0.1) end
         if track then
